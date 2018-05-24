@@ -383,7 +383,7 @@ MoocPlayer.prototype._init = function () {
         visiable: true, //是否显示资源面板
         plugins: {
           quiz: {
-            visible: true,
+            visible: false, // 不显示询问
             url: me.resourcePlugPath
           },
           ppt: {
