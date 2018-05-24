@@ -1,0 +1,20 @@
+{
+  "name": "erya-helper",
+  "version": "1.0.0",
+  "description": "尔雅助手，提高你的学（shua）习（ke）体验",
+  "scripts": {
+    "start": "webpack --watch --mode=production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.3",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  }
+}

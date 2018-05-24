@@ -1,0 +1,41 @@
+{
+  "name": "erya-helper",
+  "version": "1.0.0",
+  "description": "提高你的学（shua）习（ke）体验",
+  "author": "Tao Wei <t888y@qq.com>",
+  "icons": {
+    "16": "./assets/icons/logo.png",
+    "48": "./assets/icons/logo.png",
+    "128": "./assets/icons/logo.png"
+  },
+  "browser_action": {
+    "default_icon": "./assets/icons/logo-gray.png",
+    "default_popup": "./popups/background.html",
+    "default_title": "尔雅助手"
+  },
+  "background": {
+    "scripts": [
+      "./background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.chaoxing.com/*"],
+      "js": ["./content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "moocplayer.js",
+    "inject.js"
+  ],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.chaoxing.com/*"
+  ],
+  "externally_connectable": {
+    "matches": ["*://*.chaoxing.com/*"]
+  },
+  "manifest_version": 2
+}
