@@ -9,3 +9,8 @@
 - 视频失去焦点继续播放
 - 视频中不弹出询问框
 - 自动播放下一集视频
+
+#### Release
+
+[Download at Github ](https://github.com/tw1997/erya-helper/releases)
+
