@@ -495,6 +495,7 @@ MoocPlayer.prototype._init = function () {
     //点击暂停时触发事件
     onPause: function (event, proTime) {
       me.sendLog('pause', proTime);
+      me.playMovie();
     },
     //答题错误时触发。
     onAnswerWrong: function (event, data) {
