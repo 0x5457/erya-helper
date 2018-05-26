@@ -609,10 +609,11 @@ MoocPlayer.prototype._init = function () {
             me.logCount = 0;
             me.pauseMovie();
             if (Math.floor(XMLHttpRequest.status) >= 500) {
-              alert('服务器现在繁忙，不能保证您能否正常完成任务，请您稍后继续...');
+              console.log('服务器现在繁忙，不能保证您能否正常完成任务，请您稍后继续...');
             } else {
-              alert('您的网络不稳定，请您稍后继续...');
+              console.log('您的网络不稳定，请您稍后继续...');
             }
+            window.location.reload();
             //me.sendLog(flag, time);
           }
         }
@@ -936,10 +937,10 @@ MoocPlayer.prototype._init = function () {
     }
   }
   config.enableSwitchWindow = me.data.enableSwitchWindow;
-  config.enableSwitchWindow = 1;
   if (!config.logParam.isSendLog) {
     config.enableSwitchWindow = 1;
   }
+  config.enableSwitchWindow = 1;
   me.config = config;
 
   me.player = $('#' + me.render).cxplayer(config);
@@ -1015,7 +1016,6 @@ MoocPlayer.prototype.switchWindow = function (bSwitchWindow) {
     event.stopPropagation && event.stopPropagation();
     event.cancelBubble = true;
   }
-
   if (!bSwitchWindow) {
     if (document.all) {
       //top.document.onfocusin =  focus;
