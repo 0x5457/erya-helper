@@ -10,7 +10,7 @@
   },
   "browser_action": {
     "default_icon": "./assets/icons/logo-gray.png",
-    "default_popup": "./popups/background.html",
+    "default_popup": "./popups/popup.html",
     "default_title": "尔雅助手"
   },
   "background": {
