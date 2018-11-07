@@ -5,7 +5,7 @@ module.exports = {
   entry: {
     background: './src/background.js',
     inject: './src/injection/inject.js',
-    content: './src/content.js',
+    content: './src/content.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -21,10 +21,15 @@ module.exports = {
       }
     }]
   },
+  node: {
+    fs: 'empty',
+    net: 'empty'
+  },
   plugins: [
     new CopyWebpackPlugin([
       {from: "src/manifest.json", to: '../dist'},
       {from: "src/injection/moocplayer.js", to: '../dist/moocplayer.js'},
+      {from: "src/injection/videojs-ext.js", to: '../dist/videojs-ext.js'},
       {context: 'src/popups/', from : "*" , to : '../dist/popups'},
       {context: 'src/assets/', from : "*/*" , to : '../dist/assets'},
     ])

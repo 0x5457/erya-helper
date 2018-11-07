@@ -417,6 +417,7 @@ MoocPlayer.prototype._init = function () {
     },
     //播放器初始化完成时触发。event ：事件源，当前播放器对象。
     onInitComplete: function (event) {
+      
     },
     //获取视频播放地址，验证不通过时触发。event ：事件源，当前播放器对象。seriId ：表示视频所在的系列id。videoId ：当前播放的视频id。data：获取播放地址时服务端返回的数据。
     onNotVideoUrl: function (event, seriId, videoId, data) {

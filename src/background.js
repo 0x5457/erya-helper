@@ -8,20 +8,20 @@ chrome.runtime.onMessage.addListener((req, sender) => {
   }
 });
 
+const myMookPlayUrl = chrome.runtime.getURL("moocplayer.js");
+const videojsExtUrl = chrome.runtime.getURL("videojs-ext.js");
 
-const myMookPlayUrl = chrome.runtime.getURL('moocplayer.js');
 chrome.webRequest.onBeforeRequest.addListener(
-  function(details){
-    if (details.url.includes('moocplayer')) {
-      return {redirectUrl: myMookPlayUrl};
+  function(details) {
+    if (details.url.includes("moocplayer")) {
+      return { redirectUrl: myMookPlayUrl };
+    }
+    if (details.url.includes("ext.min.js")) {
+      return { redirectUrl: videojsExtUrl };
     }
   },
   {
-    urls: [
-      "*://*.chaoxing.com/*"
-    ]
+    urls: ["*://*.chaoxing.com/*"]
   },
-  [
-    "blocking"
-  ]
+  ["blocking"]
 );

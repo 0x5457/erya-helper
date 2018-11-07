@@ -27,7 +27,8 @@
   ],
   "web_accessible_resources": [
     "moocplayer.js",
-    "inject.js"
+    "inject.js",
+    "videojs-ext.js"
   ],
   "permissions": [
     "webRequest",
