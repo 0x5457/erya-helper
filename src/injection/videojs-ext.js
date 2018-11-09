@@ -243,11 +243,12 @@ Ext.define("ans.VideoJs", {
         ispublic: true
       }
     ];
-    if (params.cdn) {
-      cdn = cdn.concat(params.cdn).sort(function(o1, o2) {
-        return o1.indexorder > o2.indexorder;
-      });
-    }
+    // 取消本校cdn
+    // if (params.cdn) {
+    //   cdn = cdn.concat(params.cdn).sort(function(o1, o2) {
+    //     return o1.indexorder > o2.indexorder;
+    //   });
+    // }
     function m3u8(objectId, r, cdn) {
       return (
         "http://hls-ans.chaoxing.com/hls/m3u8/" +
